@@ -11,7 +11,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
+}
+
+.i2,
+.i4 {
+    height: 200px;
+    font-size: 50px;
 }
 
 .item {
@@ -19,10 +25,5 @@
     padding: 15px;
     margin: 5px;
     color: #fff;
-    font-size: 16px;
-}
-
-.i2,
-.i4 {
-    height: 200px
+    /* font-size: 16px; */
 }
