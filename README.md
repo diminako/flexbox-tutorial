@@ -8,7 +8,7 @@ Working through flexbox to learn more CSS techniques.  Documenting so they are e
 
 ## WHY!?
 ----
-Because I suck at CSS and really need to improve my front end styling!
+Because I (used to) suck at CSS and really need to improve my front end styling!
 
 
 
