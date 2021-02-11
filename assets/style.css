@@ -9,12 +9,20 @@
     padding: 10px;
 
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .item {
     background-color: maroon;
-    padding: 30px;
-    margin: 30px;
+    padding: 15px;
+    margin: 5px;
     color: #fff;
-    font-size: 40px;
+    font-size: 16px;
+}
+
+.i2,
+.i4 {
+    height: 200px
 }
