@@ -8,7 +8,7 @@
     background-color: #ccc;
     padding: 10px;
 
-    
+    display: flex;
 }
 
 .item {

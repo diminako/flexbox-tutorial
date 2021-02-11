@@ -4,8 +4,12 @@ Working through flexbox to learn more CSS techniques.  Documenting so they are e
 ## WHY!?  
 Because I suck at CSS and really need to improve my front end styling!
 
+## Table of Context  
+[Control](#control)  
+[Flex](#flex)
+
 ## Control
-This is the starting code without flex added.  
+This is the starting code without flex added.  For the Rest I will only be adding flex-box CSS Snippets Unless I change the HTML(which I will include if I do.).
 
 ### HTML
 ```html
@@ -56,3 +60,35 @@ This is the starting code without flex added.
 }
 ```
 ### This Is The Output
+![control image](/assets/img/control.png)
+
+## **Flex**  
+This is achieved by just adding ```display: flex;``` onto the ```.container``` class.
+### CSS
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ccc;
+    padding: 10px;
+
+//////////////////////////    <
+    display: flex;          <---------
+//////////////////////////    <
+
+}
+
+.item {
+    background-color: maroon;
+    padding: 30px;
+    margin: 30px;
+    color: #fff;
+    font-size: 40px;
+}
+```
+### This Is The Output
+![control image](/assets/img/display-flex.png)
