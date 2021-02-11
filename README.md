@@ -45,17 +45,20 @@ This is the starting code without flex added.  For the Rest I will only be addin
     <link rel="stylesheet" href="./assets/style.css">
 
     <title>Flex Box Tutorial</title>
+
 </head>
 <body>
 
-    <div class="container">
-
-        <div class="item">1. First</div>
-        <div class="item">2. Second</div>
-        <div class="item">3. Third</div>
-        <div class="item">4. Fourth</div>
-        <div class="item">5. Last</div>
-
+    <div class="example-box">
+    
+        <ul class="flex-container">
+            <li class="flex-item i1">1.</li>
+            <li class="flex-item i2">2.</li>
+            <li class="flex-item i3">3.</li>
+            <li class="flex-item i4">4.</li>
+            <li class="flex-item i5">5.</li>
+        </ul>
+        
     </div>
 
 </body>
@@ -71,23 +74,38 @@ This is the starting code without flex added.  For the Rest I will only be addin
     box-sizing: border-box;
 }
 
-.container {
-    background-color: #ccc;
+.example-box {
+    background-color: rgb(173, 173, 173);
     padding: 10px;
 }
 
-.item {
+/* This is where the majority of properties will be changed. */
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+}
+
+/* This is styled so the flex-items reaction to flex properties is easily visible. */
+.flex-item {
     background-color: maroon;
-    padding: 30px;
-    margin: 30px;
-    color: #fff;
-    font-size: 40px;
+    height: 30px;
+    width: 30px;
+    margin: 1px;
+    border: 2px solid orange;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 ```
 
 
 
-### This Is The Output of the Control
+### Output:
 ![control image](/assets/img/control.png)
 
 
@@ -102,21 +120,22 @@ The flex items are set inside of the container side by side.
 
 ### CSS
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
-
-//////////////////////////    <
-    display: flex;          <---------
-//////////////////////////    <
-
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
+    display: flex;  <--------------  
 }
 
 ```
 
 
 
-### This Is The Output
+### Output:
 ![control image](/assets/img/display-flex.png)
 
 
@@ -164,9 +183,13 @@ Notice the ITEMS in the container are reversed order.
 ## Column
 -----
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
 
 //////////////////////////    
     display: flex;                <
@@ -187,10 +210,14 @@ Notice the ITEMS in the container set in a column almost like the Control but wi
 ## Column-Reverse
 -----
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
-
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
 //////////////////////////    
     display: flex;                     <
     flex-direction: column-reverse;  <---------------
@@ -200,10 +227,10 @@ Notice the ITEMS in the container set in a column almost like the Control but wi
 
 
 
-### This Is The Output  
+### Output:  
 Looks rather similar to the control... but take a look below at what you can do to the ITEMS inside.
 
-![flex-direction row-reverse](/assets/img/flex-direction-column-reverse.png)  
+![flex-direction column-reverse](/assets/img/flex-direction-column-reverse.png)  
 
 
 
@@ -217,10 +244,14 @@ Looks rather similar to the control... but take a look below at what you can do 
 ------
 ```justify-content: center;``` Does kinda what you would expect by now through this tutorial... It puts the content in the center of the container.  
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
-
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
 ////////////////////////////
     display: flex;
     flex-direction: row;          <
@@ -231,8 +262,7 @@ Looks rather similar to the control... but take a look below at what you can do 
 
 
 
-### This Is The Output  
-* TAKE NOTE!  The only reason there is space between the ITEMS is because of the margin on the "item" class
+### Output:  
 ![Justify-Content Center](/assets/img/justify-content-center.png)  
 
 
@@ -241,10 +271,14 @@ Looks rather similar to the control... but take a look below at what you can do 
 ------
 ```justify-content: space-between;``` Put space in between each of the ITEMS in the container.  
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
-
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
 ////////////////////////////
     display: flex;
     flex-direction: row;                 <
@@ -255,8 +289,7 @@ Looks rather similar to the control... but take a look below at what you can do 
 
 
 
-### This Is The Output  
-* TAKE NOTE!  The only reason there is space by the 1st and last ITEMS is because of the margin on the "item" class once again.
+### Output:  
 ![Justify-Content Space Between](/assets/img/justify-content-space-between.png)  
 
 
@@ -265,10 +298,14 @@ Looks rather similar to the control... but take a look below at what you can do 
 ------
 ```justify-content: space-around;``` Put an even amount of space on the left and right side of each of the flex ITEMS.  
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
-
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
 ////////////////////////////
     display: flex;
     flex-direction: row;                 <
@@ -279,8 +316,7 @@ Looks rather similar to the control... but take a look below at what you can do 
 
 
 
-### This Is The Output  
-* TAKE NOTE!  The difference is a little hard to see because of the margin but notice the extra spacing at the 1st and last.
+### Output:  
 ![Justify-Content Space Between](/assets/img/justify-content-space-around.png)  
 
 
@@ -289,10 +325,14 @@ Looks rather similar to the control... but take a look below at what you can do 
 ------
 ```justify-content: space-evenly;``` Put space in between each of the ITEMS in the container EVENLY.  
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
-
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
 ////////////////////////////
     display: flex;
     flex-direction: row;                 <
@@ -303,7 +343,7 @@ Looks rather similar to the control... but take a look below at what you can do 
 
 
 
-### This Is The Output  
+### Output:  
 * TAKE NOTE!  The only reason there is space by the 1st and last ITEMS is because of the margin on the "item" class once again.
 ![Justify-Content Space Between](/assets/img/justify-content-space-evenly.png)  
 
@@ -313,10 +353,14 @@ Looks rather similar to the control... but take a look below at what you can do 
 ------
 ```justify-content: flexs-start;``` Aligns the ITEMS at the start of the container Main Axis.  
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
-
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
 ////////////////////////////
     display: flex;
     flex-direction: row;                 <
@@ -327,7 +371,7 @@ Looks rather similar to the control... but take a look below at what you can do 
 
 
 
-### This Is The Output  
+### Output:  
 * TAKE NOTE!  The only reason there is space by the 1st and last ITEMS is because of the margin on the "item" class once again.
 ![Justify-Content Flex Start](/assets/img/justify-content-flex-start.png)  
 
@@ -337,10 +381,14 @@ Looks rather similar to the control... but take a look below at what you can do 
 ------
 ```justify-content: flex-end;``` Put space in between each of the ITEMS in the container.  
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
-
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
 ////////////////////////////
     display: flex;
     flex-direction: row;                 <
@@ -351,7 +399,7 @@ Looks rather similar to the control... but take a look below at what you can do 
 
 
 
-### This Is The Output  
+### Output:  
 * TAKE NOTE!  The only reason there is space by the 1st and last ITEMS is because of the margin on the "item" class once again.
 ![Justify-Content Flex End](/assets/img/justify-content-flex-end.png)  
 
@@ -370,37 +418,32 @@ For this one I needed to have uneven sized items inside the container so I alter
 Lets start with ```align-items: center;``` 
 * TAKE NOTE - I changed some of the HTML by adding new classes. and some css to change the styling of those 2 ITEMS.
 
-```html
-    <div class="container">
 
-        <div class="item">1. First</div>
-        <div class="item i2">2. Second</div> <---------  I added class i2
-        <div class="item">3. Third</div>
-        <div class="item i4">4. Fourth</div> <---------  I added class i4 
-        <div class="item">5. Last</div>
 
-    </div>
-```
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
-
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
     display: flex;
     flex-direction: row;
     justify-content: center;    <
-    align-items: center;      <---------  Also Notice this new property  ;-)  What do you think it does? Let's see..
+    align-items: center;      <---------  
 }                               <
 
 .i2,
 .i4 {                 <
-    height: 200px   <---------  And gave them a height of 200px
+    height: 100px   <---------  And gave them a height of 200px
 }                     <
 ```
 
 
 
-### This Is The Output  
+### Output:  
 ![Align Items Center](/assets/img/align-items-center.png)  
 
 
@@ -409,10 +452,14 @@ Lets start with ```align-items: center;```
 ---
 ```align-items: flex-start;``` makes the content begin at the "start" of the top of the container.
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
-
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
     display: flex;
     flex-direction: row;
     justify-content: center;        <
@@ -422,7 +469,7 @@ Lets start with ```align-items: center;```
 
 
 
-### This Is The Output  
+### Output:  
 ![Align Items Flex Start](/assets/img/align-items-flex-start.png)  
 
 
@@ -431,10 +478,14 @@ Lets start with ```align-items: center;```
 ---
 ```align-items: flex-end;``` makes the content begin at the "end" of the top of the container.
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
-
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
     display: flex;
     flex-direction: row;
     justify-content: center;      <
@@ -445,7 +496,7 @@ Lets start with ```align-items: center;```
 
 
 
-### This Is The Output  
+### Output:  
 ![Align Items Flex End](/assets/img/align-items-flex-end.png)  
 
 
@@ -454,20 +505,41 @@ Lets start with ```align-items: center;```
 ---
 ```align-items: stretch;``` stretches all the ITEMS to fill the container.
 ```css
-.container {
-    background-color: #ccc;
-    padding: 10px;
-
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
     display: flex;
     flex-direction: row;
     justify-content: center;    <
     align-items: stretch;      <---------
 }                               <
+
+.flex-item {
+    background-color: maroon;
+    /* height: 30px; */        <----- Without set height the ITEMS will stretch
+    width: 30px;
+    margin: 1px;
+    border: 2px solid orange;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i2,
+.i4 {
+    /* height: 100px; */        <----- Without set height the ITEMS will stretch
+}
 ```
 
 
 
-### This Is The Output  
+### Output:  
 ![Align Items Stretch](/assets/img/align-items-stretch.png)  
 
 
@@ -489,5 +561,5 @@ Lets start with ```align-items: center;```
 
 
 
-### This Is The Output  
+### Output:  
 ![Align Items Baseline](/assets/img/align-items-baseline.png)  
