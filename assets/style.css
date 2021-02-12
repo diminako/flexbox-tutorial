@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
 }
 
 .flex-item {
@@ -39,6 +39,8 @@
     margin: 1px;
     border: 2px solid orange;
     
+    flex-grow: 1;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,4 +49,5 @@
 .i2,
 .i4 {
     height: 100px;
+    flex-grow: 2;
 }

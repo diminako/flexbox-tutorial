@@ -548,7 +548,7 @@ Lets start with ```align-items: center;```
 ---
 ```align-items: baseline;``` aligns the contents by the bottom of the font.
 ```css
-.container {
+.flex-container {
     background-color: #ccc;
     padding: 10px;
 
@@ -563,3 +563,141 @@ Lets start with ```align-items: center;```
 
 ### Output:  
 ![Align Items Baseline](/assets/img/align-items-baseline.png)  
+
+
+
+## Align Self
+---
+```align-self``` allows you to adjust each individual item.
+```css
+.flex-container {
+    list-style-type: none;
+    list-style-position: inside;
+    height: 200px;
+    width: 94%;
+    background-color: darkslategrey;
+    color: white;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-item {
+    background-color: maroon;
+    height: 30px;
+    width: 30px;
+    margin: 1px;
+    border: 2px solid orange;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i2 {
+    height: 100px;
+}
+.i4 {
+    height: 100px;               <
+    align-self: flex-end;      <-------------------
+}                                <
+```
+
+
+
+### Output:  
+![Align Self](/assets/img/align-self.png)  
+
+
+
+## Order
+---
+```order``` allows you to adjust the positioning of ITEMS.
+```css
+.i4 {
+    height: 100px;               
+    align-self: flex-end;     <
+    order: -1;              <-------------------
+}                             <
+```
+
+
+
+### Output:  
+![order](/assets/img/order.png)  
+
+
+
+```css
+.i5 {
+    align-self: flex-start;
+    order: -3
+}
+.i4 {
+    height: 100px;               
+    align-self: flex-end;     <
+    order: -1;              <-------------------
+}                             <
+```
+
+
+
+### Output:  
+![order-2](/assets/img/order-2.png)  
+
+
+
+## Flex Grow
+---
+```flex-grow``` makes ITEMS occupy all the space available to them.
+```css
+.flex-item {
+    background-color: maroon;
+    height: 30px;
+    width: 30px;
+    margin: 1px;
+    border: 2px solid orange;
+                                  <
+    flex-grow: 1;               <---------
+                                  <
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}                             
+```
+
+
+
+### Output:  
+![Flex Grow](/assets/img/flex-grow.png)  
+
+
+
+```css
+.flex-item {
+    background-color: maroon;
+    height: 30px;
+    width: 30px;
+    margin: 1px;
+    border: 2px solid orange;
+    
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i2,
+.i4 {
+    height: 100px;        <
+    flex-grow: 2;       <------------  Set's these larger
+}                         <   
+```
+
+
+
+### Output:  
+![Flex Grow](/assets/img/flex-grow-2.png)  
