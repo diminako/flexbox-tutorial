@@ -39,15 +39,15 @@
     margin: 1px;
     border: 2px solid orange;
     
-    flex-grow: 1;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.i2,
+.i2 {
+    flex: 0 1 300px;
+}
 .i4 {
     height: 100px;
-    flex-grow: 2;
+    flex-basis: 15%;
 }

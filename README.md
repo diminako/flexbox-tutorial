@@ -21,7 +21,8 @@ Because I (used to) suck at CSS and really need to improve my front end styling!
 [Flex-Direction](#flex-direction)  
 [Column](#column)  
 [Justify-Content](#justify-content)  
-[Align Items](#align-items)
+[Align Items](#align-items)  
+[Align Self](#align-self)  
 
 
 
@@ -693,7 +694,7 @@ Lets start with ```align-items: center;```
 .i2,
 .i4 {
     height: 100px;        <
-    flex-grow: 2;       <------------  Set's these larger
+    flex-basis: 40%;       <------------  Set's these larger
 }                         <   
 ```
 
@@ -701,3 +702,68 @@ Lets start with ```align-items: center;```
 
 ### Output:  
 ![Flex Grow](/assets/img/flex-grow-2.png)  
+
+
+
+## Flex Basis
+---
+```flex-basis``` makes ITEMS occupy all the space alloted to them in place of width.
+```css
+.flex-item {
+    background-color: maroon;
+    height: 30px;
+    width: 30px;
+    margin: 1px;
+    border: 2px solid orange;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i2,
+.i4 {
+    height: 100px;        <
+    flex-basis: 40%;    <--------
+}                         <
+```
+
+
+
+### Output:  
+![Flex Basis](/assets/img/flex-basis.png)  
+
+
+
+## Flex
+---
+```flex: (grow) (shrink) (basis)``` takes three values .
+```css
+.flex-item {
+    background-color: maroon;
+    height: 30px;
+    width: 30px;
+    margin: 1px;
+    border: 2px solid orange;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i2 {                     <
+    flex: 0 1 300px;    <---------
+}                         <
+.i4 {
+    height: 100px;        <
+    flex-basis: 15%;    <--------
+}                         <
+```
+
+
+
+### Output:  
+![Flex](/assets/img/flex-general.png)  
+
+
+
